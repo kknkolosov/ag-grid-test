@@ -1,0 +1,4 @@
+<div class="header-grid">
+  <button (click)="showSelectionMode()">{{ tglButtonText }}</button>
+  <span>{{resources.selected}}: <strong>{{ params.api.getSelectedRows().length }}</strong> {{resources.of}} <strong>{{ params.api.getDisplayedRowCount() }}</strong></span>
+</div>
