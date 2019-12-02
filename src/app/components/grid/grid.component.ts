@@ -1,10 +1,21 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { GridOptions } from '@ag-grid-community/core';
-import { EntityService } from 'src/app/services/entity.service';
-import { CheckboxComponent } from './column/checkbox/checkbox.component';
-import { title, description, published, thumbnail, checkbox } from './columnDefinitions/columnDefinitions';
 import { AllModules } from '@ag-grid-enterprise/all-modules';
+import { EntityService } from 'src/app/services/entity.service';
+import {
+  title,
+  description,
+  published,
+  thumbnail,
+  checkbox
+} from './columnDefinitions';
+import {
+  SelectionButtonComponent,
+  SelectedRecordsComponent,
+  TotalRecordsComponent
+} from './side-bar';
+import { ItemModel } from 'src/app/models/item.model';
 
 @Component({
   selector: 'app-grid',
@@ -12,7 +23,7 @@ import { AllModules } from '@ag-grid-enterprise/all-modules';
   styleUrls: ['./grid.component.scss']
 })
 export class GridComponent implements OnInit {
-  rowData: Observable<any[]>;
+  rowData: Observable<ItemModel[]>;
   modules = AllModules;
   params: any;
   isLoaded = false;
@@ -36,22 +47,32 @@ export class GridComponent implements OnInit {
     getContextMenuItems: (params) => this.getContextMenuItems(params),
   };
 
+  statusBar = {
+    statusPanels: [
+      { statusPanel: 'selectionButtonComponent', align: 'left' },
+      { statusPanel: 'selectedRecordsComponent', align: 'right' },
+      { statusPanel: 'totalRecordsComponent', align: 'right' }
+    ]
+  };
+
+  frameworkComponents = {
+   selectionButtonComponent: SelectionButtonComponent,
+   selectedRecordsComponent: SelectedRecordsComponent,
+   totalRecordsComponent: TotalRecordsComponent
+  };
+
   constructor(private entityService: EntityService ) { }
 
   ngOnInit() {
     this.rowData = this.entityService.get();
   }
 
-  onGridReady(params): void {
+  onGridReady(params: any): void {
     this.params = params;
     this.isLoaded = true;
   }
 
-  suppressRowClick(event) {
-    this.gridOptions.suppressRowClickSelection = event;
-  }
-
-  getContextMenuItems(params): any[] {
+  getContextMenuItems(params: any): any[] {
     const url = this.entityService.getUrlById(params.node.data.videoId);
     return [
       'copy',

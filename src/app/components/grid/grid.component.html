@@ -1,20 +1,14 @@
 <div class="grid">
-  <ng-container  *ngIf="isLoaded; else elseBlock">
-      <app-header [params]="params" (suppressRowClick)="suppressRowClick($event)"></app-header>
-  </ng-container>
-  <ng-template #elseBlock>
-    <div class="header-grid" *ngIf="!isLoaded">
-      Loading...
-    </div>
-  </ng-template>
   <ag-grid-angular
     #agGrid
-    style="width: 100%; height:100%; height: calc(100% - 40px);"
+    style="width: 100%; height:100%;"
     id="myGrid"
     class="ag-theme-balham"
     [gridOptions]="gridOptions"
     [rowData]="rowData | async"
     [modules]="modules"
+    [statusBar]="statusBar"
+    [frameworkComponents]="frameworkComponents"
     (gridReady)="onGridReady($event)"
   ></ag-grid-angular>
 </div>

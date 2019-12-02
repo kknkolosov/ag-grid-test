@@ -1,6 +1,6 @@
 export const resources = {
   showSelection: 'Show selection',
   hideSelection: 'Hide selection',
-  selected: 'Selected',
-  of: 'of'
-}
+  totalCountOfRecords : 'Total count of records ',
+  selectedRecordsCount: 'Selected records count'
+};

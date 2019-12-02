@@ -2,22 +2,27 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AgGridModule } from '@ag-grid-community/angular';
 import { FormsModule } from '@angular/forms';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GridComponent } from './components/grid/grid.component';
-
 import {
   LinkComponent,
   DateComponent,
   TextComponent,
   ThumbnailComponent,
-  CheckboxComponent,
-  HeaderCheckboxComponent
-} from './components/grid/column';
-
-import { HeaderComponent } from './components/grid/header/header.component';
+  CheckboxAgCellRendererComponent
+} from './components/grid/cell-renderers';
+import {
+  CheckboxAgHeaderRendererComponent
+} from './components/grid/cell-headers';
+import { CheckboxComponent } from './components/common/checkbox/checkbox.component';
+import { LinkedComponent } from './components/common/icons/linked/linked.component';
+import {
+  SelectionButtonComponent,
+  SelectedRecordsComponent,
+  TotalRecordsComponent
+} from './components/grid/side-bar';
 
 @NgModule({
   declarations: [
@@ -27,9 +32,13 @@ import { HeaderComponent } from './components/grid/header/header.component';
     DateComponent,
     TextComponent,
     ThumbnailComponent,
+    CheckboxAgCellRendererComponent,
+    CheckboxAgHeaderRendererComponent,
     CheckboxComponent,
-    HeaderCheckboxComponent,
-    HeaderComponent
+    LinkedComponent,
+    SelectionButtonComponent,
+    TotalRecordsComponent,
+    SelectedRecordsComponent
   ],
   imports: [
     HttpClientModule,
@@ -41,8 +50,11 @@ import { HeaderComponent } from './components/grid/header/header.component';
       TextComponent,
       LinkComponent,
       ThumbnailComponent,
-      CheckboxComponent,
-      HeaderCheckboxComponent
+      CheckboxAgCellRendererComponent,
+      CheckboxAgHeaderRendererComponent,
+      SelectionButtonComponent,
+      SelectedRecordsComponent,
+      TotalRecordsComponent
     ])
   ],
   providers: [],

@@ -2,15 +2,15 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { ItemModel } from '../models/item.model';
-import { first, map } from 'rxjs/operators';
-import { VideoSerializer } from '../serializers/video.serializer';
+import { map } from 'rxjs/operators';
+import { VideoMapper } from '../mappers/video.mapper';
 
 @Injectable({
   providedIn: 'root'
 })
 export class EntityService {
   videoUrl = `https://www.youtube.com/watch?v=`;
-  videoSerializer = new VideoSerializer();
+  videoMapper = new VideoMapper();
 
   constructor(private httpClient: HttpClient) { }
 
@@ -26,7 +26,7 @@ export class EntityService {
 
   private convertData(data: any): any[] {
     return data.items.map(item => {
-      return this.videoSerializer.fromJson(item);
+      return this.videoMapper.mapFrom(item);
     });
   }
 }
