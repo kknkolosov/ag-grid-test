@@ -3,7 +3,13 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { AgGridModule } from '@ag-grid-community/angular';
-import { DateComponent, TextComponent, CheckboxAgCellRendererComponent, LinkComponent, ThumbnailComponent } from './cell-renderers';
+import {
+  DateAgCellRendererComponent,
+  TextAgCellRendererComponent,
+  CheckboxAgCellRendererComponent,
+  LinkAgCellRendererComponent,
+  ThumbnailAgCellRendererComponent
+} from './cell-renderers';
 import { CheckboxAgHeaderRendererComponent } from './cell-headers';
 import { SelectionButtonComponent, TotalRecordsComponent, SelectedRecordsComponent } from './side-bar';
 import { GridComponent } from './grid.component';
@@ -17,10 +23,10 @@ describe('GridComponent', () => {
     TestBed.configureTestingModule({
       declarations: [
         GridComponent,
-        DateComponent,
-        TextComponent,
-        LinkComponent,
-        ThumbnailComponent,
+        DateAgCellRendererComponent,
+        TextAgCellRendererComponent,
+        LinkAgCellRendererComponent,
+        ThumbnailAgCellRendererComponent,
         CheckboxAgCellRendererComponent,
         CheckboxAgHeaderRendererComponent,
         SelectionButtonComponent,
@@ -32,10 +38,10 @@ describe('GridComponent', () => {
         HttpClientModule,
         AgGridModule.withComponents([
           GridComponent,
-          DateComponent,
-          TextComponent,
-          LinkComponent,
-          ThumbnailComponent,
+          DateAgCellRendererComponent,
+          TextAgCellRendererComponent,
+          LinkAgCellRendererComponent,
+          ThumbnailAgCellRendererComponent,
           CheckboxAgCellRendererComponent,
           CheckboxAgHeaderRendererComponent,
           SelectionButtonComponent,

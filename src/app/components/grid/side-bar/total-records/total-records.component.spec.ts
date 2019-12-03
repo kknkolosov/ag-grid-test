@@ -1,5 +1,4 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { TotalRecordsComponent } from './total-records.component';
 
 describe('TotalRecordsComponent', () => {

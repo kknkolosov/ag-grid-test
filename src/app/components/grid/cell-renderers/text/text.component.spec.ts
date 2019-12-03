@@ -1,20 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { TextAgCellRendererComponent } from './text.component';
 
-import { TextComponent } from './text.component';
-
-describe('TextComponent', () => {
-  let component: TextComponent;
-  let fixture: ComponentFixture<TextComponent>;
+describe('TextAgCellRendererComponent', () => {
+  let component: TextAgCellRendererComponent;
+  let fixture: ComponentFixture<TextAgCellRendererComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TextComponent ]
+      declarations: [ TextAgCellRendererComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(TextComponent);
+    fixture = TestBed.createComponent(TextAgCellRendererComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -7,17 +7,16 @@ import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GridComponent } from './components/grid/grid.component';
 import {
-  LinkComponent,
-  DateComponent,
-  TextComponent,
-  ThumbnailComponent,
+  LinkAgCellRendererComponent,
+  DateAgCellRendererComponent,
+  TextAgCellRendererComponent,
+  ThumbnailAgCellRendererComponent,
   CheckboxAgCellRendererComponent
 } from './components/grid/cell-renderers';
 import {
   CheckboxAgHeaderRendererComponent
 } from './components/grid/cell-headers';
 import { CheckboxComponent } from './components/common/checkbox/checkbox.component';
-import { LinkedComponent } from './components/common/icons/linked/linked.component';
 import {
   SelectionButtonComponent,
   SelectedRecordsComponent,
@@ -28,14 +27,13 @@ import {
   declarations: [
     AppComponent,
     GridComponent,
-    LinkComponent,
-    DateComponent,
-    TextComponent,
-    ThumbnailComponent,
+    LinkAgCellRendererComponent,
+    DateAgCellRendererComponent,
+    TextAgCellRendererComponent,
+    ThumbnailAgCellRendererComponent,
     CheckboxAgCellRendererComponent,
     CheckboxAgHeaderRendererComponent,
     CheckboxComponent,
-    LinkedComponent,
     SelectionButtonComponent,
     TotalRecordsComponent,
     SelectedRecordsComponent
@@ -46,10 +44,10 @@ import {
     FormsModule,
     AppRoutingModule,
     AgGridModule.withComponents([
-      DateComponent,
-      TextComponent,
-      LinkComponent,
-      ThumbnailComponent,
+      DateAgCellRendererComponent,
+      TextAgCellRendererComponent,
+      LinkAgCellRendererComponent,
+      ThumbnailAgCellRendererComponent,
       CheckboxAgCellRendererComponent,
       CheckboxAgHeaderRendererComponent,
       SelectionButtonComponent,

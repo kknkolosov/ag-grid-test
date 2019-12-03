@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ThumbnailComponent } from './thumbnail.component';
+import { ThumbnailAgCellRendererComponent } from './thumbnail.component';
 
-describe('ThumbnailComponent', () => {
-  let component: ThumbnailComponent;
-  let fixture: ComponentFixture<ThumbnailComponent>;
+describe('ThumbnailAgCellRendererComponent', () => {
+  let component: ThumbnailAgCellRendererComponent;
+  let fixture: ComponentFixture<ThumbnailAgCellRendererComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ThumbnailComponent ]
+      declarations: [ ThumbnailAgCellRendererComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ThumbnailComponent);
+    fixture = TestBed.createComponent(ThumbnailAgCellRendererComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

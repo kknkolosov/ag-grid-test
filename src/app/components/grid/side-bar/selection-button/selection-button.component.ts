@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { Params } from '@angular/router';
 import { resources } from 'src/app/global/resources';
 
 @Component({
@@ -8,11 +7,11 @@ import { resources } from 'src/app/global/resources';
   styleUrls: ['./selection-button.component.scss']
 })
 export class SelectionButtonComponent {
-  params: Params;
+  params: any;
   tglButtonText = resources.showSelection;
   show = false;
 
-  agInit(params: Params): void {
+  agInit(params: any): void {
     this.params = params;
   }
 

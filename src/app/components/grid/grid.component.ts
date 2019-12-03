@@ -9,7 +9,7 @@ import {
   published,
   thumbnail,
   checkbox
-} from './columnDefinitions';
+} from './column-definitions';
 import {
   SelectionButtonComponent,
   SelectedRecordsComponent,
@@ -22,11 +22,11 @@ import { ItemModel } from 'src/app/models/item.model';
   templateUrl: './grid.component.html',
   styleUrls: ['./grid.component.scss']
 })
+
 export class GridComponent implements OnInit {
   rowData: Observable<ItemModel[]>;
   modules = AllModules;
   params: any;
-  isLoaded = false;
   gridOptions: GridOptions = {
     defaultColDef: {
       sortable: true,
@@ -69,7 +69,6 @@ export class GridComponent implements OnInit {
 
   onGridReady(params: any): void {
     this.params = params;
-    this.isLoaded = true;
   }
 
   getContextMenuItems(params: any): any[] {

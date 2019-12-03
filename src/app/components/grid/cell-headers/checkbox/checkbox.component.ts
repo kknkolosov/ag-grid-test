@@ -1,9 +1,9 @@
-import { Component, OnInit, OnDestroy, ElementRef } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { IHeaderAngularComp } from '@ag-grid-community/angular';
 import { fromEvent, Subscription } from 'rxjs';
 
 @Component({
-  selector: 'app-header-checkbox',
+  selector: 'app-checkbox-ag-header-renderer',
   templateUrl: './checkbox.component.html',
   styleUrls: ['./checkbox.component.scss']
 })

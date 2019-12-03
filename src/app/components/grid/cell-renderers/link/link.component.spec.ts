@@ -1,12 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { AgGridModule } from '@ag-grid-community/angular';
 import {
-  DateComponent,
-  TextComponent,
+  DateAgCellRendererComponent,
+  TextAgCellRendererComponent,
   CheckboxAgCellRendererComponent,
-  LinkComponent,
-  ThumbnailComponent
+  LinkAgCellRendererComponent,
+  ThumbnailAgCellRendererComponent
 } from '../../cell-renderers';
 import { CheckboxAgHeaderRendererComponent } from '../../cell-headers';
 import { SelectionButtonComponent, TotalRecordsComponent, SelectedRecordsComponent } from '../../side-bar';
@@ -15,18 +14,18 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { CheckboxComponent } from 'src/app/components/common/checkbox/checkbox.component';
 
-describe('LinkComponent', () => {
-  let component: LinkComponent;
-  let fixture: ComponentFixture<LinkComponent>;
+describe('LinkAgCellRendererComponent', () => {
+  let component: LinkAgCellRendererComponent;
+  let fixture: ComponentFixture<LinkAgCellRendererComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [
         GridComponent,
-        DateComponent,
-        TextComponent,
-        LinkComponent,
-        ThumbnailComponent,
+        DateAgCellRendererComponent,
+        TextAgCellRendererComponent,
+        LinkAgCellRendererComponent,
+        ThumbnailAgCellRendererComponent,
         CheckboxAgCellRendererComponent,
         CheckboxAgHeaderRendererComponent,
         SelectionButtonComponent,
@@ -38,10 +37,10 @@ describe('LinkComponent', () => {
         HttpClientModule,
         AgGridModule.withComponents([
           GridComponent,
-          DateComponent,
-          TextComponent,
-          LinkComponent,
-          ThumbnailComponent,
+          DateAgCellRendererComponent,
+          TextAgCellRendererComponent,
+          LinkAgCellRendererComponent,
+          ThumbnailAgCellRendererComponent,
           CheckboxAgCellRendererComponent,
           CheckboxAgHeaderRendererComponent,
           SelectionButtonComponent,
@@ -55,7 +54,7 @@ describe('LinkComponent', () => {
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(LinkComponent);
+    fixture = TestBed.createComponent(LinkAgCellRendererComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

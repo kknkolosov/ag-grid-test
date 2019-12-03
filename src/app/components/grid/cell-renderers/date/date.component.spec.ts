@@ -1,20 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { DateAgCellRendererComponent } from './date.component';
 
-import { DateComponent } from './date.component';
-
-describe('DateComponent', () => {
-  let component: DateComponent;
-  let fixture: ComponentFixture<DateComponent>;
+describe('DateAgCellRendererComponent', () => {
+  let component: DateAgCellRendererComponent;
+  let fixture: ComponentFixture<DateAgCellRendererComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DateComponent ]
+      declarations: [ DateAgCellRendererComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(DateComponent);
+    fixture = TestBed.createComponent(DateAgCellRendererComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

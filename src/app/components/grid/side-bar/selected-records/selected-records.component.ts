@@ -1,7 +1,5 @@
 import { resources } from 'src/app/global/resources';
-import { Params } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
-import { IToolPanelParams } from '@ag-grid-community/core';
 
 @Component({
   selector: 'app-selected-records',

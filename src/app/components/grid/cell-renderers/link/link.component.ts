@@ -4,11 +4,11 @@ import { EntityService } from 'src/app/services/entity.service';
 import { ICellRendererParams } from '@ag-grid-community/core';
 
 @Component({
-  selector: 'app-link',
+  selector: 'app-link-ag-cell-renderer',
   templateUrl: './link.component.html',
   styleUrls: ['./link.component.scss']
 })
-export class LinkComponent implements ICellRendererAngularComp {
+export class LinkAgCellRendererComponent implements ICellRendererAngularComp {
   title: string;
   url: string;
 

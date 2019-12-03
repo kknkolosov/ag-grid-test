@@ -2,11 +2,11 @@ import { TestBed } from '@angular/core/testing';
 import { EntityService } from './entity.service';
 import { AgGridModule } from '@ag-grid-community/angular';
 import {
-  DateComponent,
-  TextComponent,
+  DateAgCellRendererComponent,
+  TextAgCellRendererComponent,
   CheckboxAgCellRendererComponent,
-  LinkComponent,
-  ThumbnailComponent
+  LinkAgCellRendererComponent,
+  ThumbnailAgCellRendererComponent
 } from '../components/grid/cell-renderers';
 import { CheckboxAgHeaderRendererComponent } from '../components/grid/cell-headers';
 import { SelectionButtonComponent, TotalRecordsComponent, SelectedRecordsComponent } from '../components/grid/side-bar';
@@ -22,10 +22,10 @@ describe('EntityService', () => {
     TestBed.configureTestingModule({
       declarations: [
         GridComponent,
-        DateComponent,
-        TextComponent,
-        LinkComponent,
-        ThumbnailComponent,
+        DateAgCellRendererComponent,
+        TextAgCellRendererComponent,
+        LinkAgCellRendererComponent,
+        ThumbnailAgCellRendererComponent,
         CheckboxAgCellRendererComponent,
         CheckboxAgHeaderRendererComponent,
         SelectionButtonComponent,
@@ -37,10 +37,10 @@ describe('EntityService', () => {
         HttpClientModule,
         AgGridModule.withComponents([
           GridComponent,
-          DateComponent,
-          TextComponent,
-          LinkComponent,
-          ThumbnailComponent,
+          DateAgCellRendererComponent,
+          TextAgCellRendererComponent,
+          LinkAgCellRendererComponent,
+          ThumbnailAgCellRendererComponent,
           CheckboxAgCellRendererComponent,
           CheckboxAgHeaderRendererComponent,
           SelectionButtonComponent,

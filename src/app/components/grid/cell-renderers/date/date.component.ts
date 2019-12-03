@@ -3,11 +3,11 @@ import { ICellRendererParams } from '@ag-grid-community/core';
 import { ICellRendererAngularComp } from '@ag-grid-community/angular';
 
 @Component({
-  selector: 'app-date',
+  selector: 'app-date-ag-cell-renderer',
   templateUrl: './date.component.html',
   styleUrls: ['./date.component.scss']
 })
-export class DateComponent implements ICellRendererAngularComp {
+export class DateAgCellRendererComponent implements ICellRendererAngularComp {
   date: string;
 
   agInit(params: ICellRendererParams) {

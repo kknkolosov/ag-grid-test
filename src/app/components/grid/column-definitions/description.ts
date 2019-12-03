@@ -1,4 +1,4 @@
-import { TextComponent } from '../cell-renderers';
+import { TextAgCellRendererComponent } from '../cell-renderers';
 
 export const description = {
   headerName: 'Description',
@@ -6,5 +6,5 @@ export const description = {
   width: 340,
   autoHeight: true,
   cellStyle: { ' white-space': 'normal', 'line-height': '20px' },
-  cellRendererFramework: TextComponent
+  cellRendererFramework: TextAgCellRendererComponent
 };
